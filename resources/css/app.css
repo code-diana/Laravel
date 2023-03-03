@@ -1,0 +1,30 @@
+a{
+    text-decoration: none;
+}
+.divraces{
+    border: 1px solid black;
+    width: 40%;
+    padding: 30px;
+    margin-left: 70px;
+}
+
+.races{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin : auto;
+    width: 50%;
+}
+.divraces img{
+    width:100%;
+    border: 1px solid;
+    margin: auto;
+}
+
+.info{
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+
+}
