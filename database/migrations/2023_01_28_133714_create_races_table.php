@@ -26,6 +26,7 @@ class CreateRacesTable extends Migration
             $table->string('start');
             $table->boolean('state');//if it's activated or not
             $table->float('price',4,2);
+            $table->float('sponsor_price',4,2)->nullable();
             $table->timestamps();
         });
     }

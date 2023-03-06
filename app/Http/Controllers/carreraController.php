@@ -27,7 +27,8 @@ class carreraController extends Controller
                 'promotion'=>request('promotion'),
                 'start'=>request('start'),
                 'state'=>1,
-                'price'=>request('price')
+                'price'=>request('price'),
+                'sponsor_price'=>request('sponsor_price')
                
 
             ]);  
@@ -90,6 +91,7 @@ class carreraController extends Controller
             $carrera->date = $request->input('date');
             $carrera->start = $request->input('start');
             $carrera->price = $request->input('price');
+            $carrera->sponsor_price = $request->input('sponsor_price');
 
 
             $carrera->save();

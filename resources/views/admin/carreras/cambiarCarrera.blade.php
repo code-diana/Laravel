@@ -57,10 +57,17 @@
 
 
     <div class="form-group row">
-        <label for="coste" class="col-sm-2 col-form-label">Coste depatrocinio</label>
+        <label for="coste" class="col-sm-2 col-form-label">Precio</label>
         <div class="col-sm-10">
           <input type="number" class="form-control" id="coste" name="price"  value="{{$carreras['price']}}" max="99" required>
         </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="coste" class="col-sm-2 col-form-label">Coste de patrocionio</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="coste" name="sponsor_price"  value="{{$carreras['sponsor_price']}}" max="99" required>
+      </div>
     </div>
 
     <div class="form-group row">

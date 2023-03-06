@@ -16,7 +16,8 @@
         <th>Km</th>
         <th>Fecha</th>
         <th>Promocion</th>
-        <th>Precio del patrocinio</th>
+        <th>Precio</th>
+        <th>Coste de patrocinio</th>
         <th>Estado</th>
         <th>Editar</th>
         <th>Subir fotos</th>
@@ -46,6 +47,7 @@
             <td><a href="cartelCarrera/{{$id}}"><img src="../resources/img/<?php echo strtolower($prom) ?>.jpg" alt=""></a></td>
 
             <td>{{$row['price']}}€</td>
+            <td>{{$row['sponsor_price']}}€</td>
 
             <td>
                 @if ($row['state'] == 0)
