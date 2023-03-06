@@ -9,9 +9,9 @@
     @csrf
 
     <div class="form-group row">
-        <label for="mapa" class="col-sm-2 col-form-label">Imagen del mapa</label>
+        <label for="mapa" class="col-sm-2 col-form-label">Link del mapa</label>
         <div class="col-sm-10">
-          <input type="file" class="form-control" id="mapa" name="image" accept=".jpg" required>
+          <input type="text" class="form-control" id="mapa" name="image" required>
         </div>
     </div>
 

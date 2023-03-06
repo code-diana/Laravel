@@ -34,19 +34,19 @@ class carreraController extends Controller
             ]);  
 
             //subir la imagen
-            if($request->hasFile('image')){
-                $imagen = $request->file('image');
+            if($request->hasFile('promotion')){
+                // $imagen = $request->file('image');
                 $promotion = $request->file('promotion');
 
-                //aquí le asignamos el nombre
-                $nombreimagen = Str::slug($request->file('image')).".".$imagen->guessExtension();
+                // //aquí le asignamos el nombre
+                // $nombreimagen = Str::slug($request->file('image')).".".$imagen->guessExtension();
                 $nombreprom = Str::slug($request->file('promotion')).".".$promotion->guessExtension();
 
                 //y la ruta
                 $ruta = public_path("../resources/img/");
     
                 //$imagen->move($ruta,$nombreimagen);
-                copy($imagen->getRealPath(),$ruta.$nombreimagen);     
+                // copy($imagen->getRealPath(),$ruta.$nombreimagen);     
                 copy($promotion->getRealPath(),$ruta.$nombreprom);     
                 
             }
@@ -143,7 +143,7 @@ class carreraController extends Controller
         $carrera = Race::find($request->id);
         if ($request->isMethod('post')){
             //importante poner file no input
-            $carrera->promotion = $request->file('image');
+            $carrera->promotion = $request->image;
             //lo de subir la imagen... importante multipart/form-data
             if($request->hasFile('image')){
                 $imagen = $request->file('image');

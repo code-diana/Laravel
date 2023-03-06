@@ -3,6 +3,7 @@
     td{width: 80px}
     table{width: 1200px;margin: auto;text-align: center;}
     img{width: 50%;height: 50%}
+    iframe{max-width:100px !important;max-height:100px;}
 </style>
 <h1>Carreras</h1>
 <table style="border-collapse:collapse">
@@ -36,8 +37,8 @@
             <td>{{$row['description']}}</td>
             <td>{{$row['unevenness']}} km</td>
             
-            <?php $image=preg_replace('([^A-Za-z0-9 ])', '', $row['image'])?>
-            <td><a href="imagenCarrera/{{$id}}"><img src="../resources/img/<?php echo strtolower($image) ?>.jpg" alt=""></a></td>
+            {{-- <?php //$image=preg_replace('([^A-Za-z0-9 ])', '', $row['image'])?> --}}
+            <td><a href="imagenCarrera/{{$id}}"><?php echo $row['image']?></a></td>
 
             <td>{{$row['number_participants']}}</td>
             <td>{{$row['km']}}</td>
@@ -45,6 +46,7 @@
 
             <?php $prom=preg_replace('([^A-Za-z0-9 ])', '', $row['promotion'])?>
             <td><a href="cartelCarrera/{{$id}}"><img src="../resources/img/<?php echo strtolower($prom) ?>.jpg" alt=""></a></td>
+            
 
             <td>{{$row['price']}}€</td>
             <td>{{$row['sponsor_price']}}€</td>
